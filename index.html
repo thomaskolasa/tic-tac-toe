@@ -1,1 +1,69 @@
-My Page
+<!DOCTYPEhtml>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- this used to be at the end (bootstrap)-->
+  
+  <link rel="stylesheet" type="text/css" href="stylesheets/tictactoe.css">
+  <title>Tic-Tac-Toe</title>
+</head>
+<body>
+  <div class="container"> <!--Or maybe fluid?-->
+
+    <div class="jumbotron">
+      <h1>Tic-Tac-Toe</h1>
+      <div class="directions">
+        <p>Set both your names. Choose a board size. <br>Play Tic-Tac-Toe. Contemplate existence.</p>
+      </div>
+    </div>
+
+    <form role="form" class="form-horizontal">
+      <div class="form-group form-group-sm">
+        <div class="col-xs-6">
+          <label for="player1-name">X's:</label>
+          <input type="text" class="form-control" id="player1-name" placeholder="Player 1">
+        </div>
+      </div>
+      <div class="form-group form-group-sm">
+        <div class="col-xs-6">
+          <label for="player2-name">O's:</label>
+          <input type="text" class="form-control" id="player2-name" placeholder="Player 2">
+        </div>
+      </div>
+      <div class="form-group form-group-sm">
+        <div id="bottomRowOfForm">
+          <div class="col-xs-2">
+            <label for="numberOfRows">Size:</label>
+            <input type="text" class="form-control" id="size" placeholder="3 to 24">
+          </div>
+          <button id="submit" class="btn btn-default">Begin!</button>
+        </div>
+      </div>
+    </form>
+
+
+  <!-- classwork modal -->
+    <div id="modal">
+        
+        <div class='modal-content'>
+            
+            <div class='modal-header'>
+                <!-- <button id="close">X</button> -->
+            </div>
+            <div class='modal-body'>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+  </div>
+
+
+</body>
+<script type="text/javascript" src="scripts/tictactoe.js"></script>
+</html>
