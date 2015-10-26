@@ -1,7 +1,9 @@
 console.log("Linked!");
 
 $(document).ready(function(){
-
+// OOX
+// XXO
+// XOX
 //var size = 3;
 var size=3;
 makeBoard(size);
@@ -55,11 +57,7 @@ function makeBoard(){
   $('#scoreBoard').append("<p id='oScore'>"+player2+"'s score: "+oScore+"</p>");
   $('#scoreBoard').append("<p id='ties'>Total ties: "+totalTies+"</p>");
   $('#scoreBoard').show();
-  //$('.container').css('width', 230*size + 'px');//works only up to size 24
-  $('.container').css('width', '690px');
-  $('.box').css('width',100/size+'%');
-  $('.box').css('height',100/size+'%');
-
+  $('.container').css('width', 230*size + 'px');//works only up to size 24
   clicking();
 };
 
@@ -89,13 +87,13 @@ function clicking(){
 function checkWinner() {
   var boxId;
   var filledCells = 0;
-  for (boxId=0; boxId<size*size; boxId++) {//run through all boxes
-    //if row wins
-    if (boxId % size === 0) {//if first box in row
+  for (boxId=0; boxId<size*size; boxId++) {
+    // //if row wins
+    if (boxId % size === 0) {
       var winningRowCounter = 0;
-      for (var i = boxId; i<boxId+size; i++) {//look through that row
+      for (var i = boxId; i<boxId+size; i++) {
         var startOfRow = $('#'+boxId);
-        if (startOfRow.text() === $('#'+i).text() && !($('#'+i).text() === "String.fromCharCode(160)")) {//if first box same as another box in row
+        if (startOfRow.text() === $('#'+i).text() && !($('#'+i).text() === "String.fromCharCode(160)")) {
           winningRowCounter +=1;
           //console.log(winningRowCounter)
         }
@@ -116,9 +114,8 @@ function checkWinner() {
       }
       if (winningColumnCounter === size) {
         victory(startOfColumn.text(), player1, player2);
-        return;
+        //return;
       }
-      //console.log(winningColumnCounter);
     }
     //if first diagnol wins
     if (boxId === 0) {
